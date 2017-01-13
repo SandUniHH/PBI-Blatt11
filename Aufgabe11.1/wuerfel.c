@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h> // for the the max value of an 
 
 int calculate_exponential(int base, int exponent)
 {
