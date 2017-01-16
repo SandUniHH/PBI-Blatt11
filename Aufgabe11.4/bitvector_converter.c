@@ -8,22 +8,12 @@
 void check_bitvector(const char *bitvector)
 {
     int i;
-<<<<<<< HEAD
-    
-=======
 
-    /*
-     * Check necessary?
->>>>>>> e4056d8b88e00f79dfee283ea9c8fec76b73d02a
     if (bitvector[NUMOFBITS] != '\0')
     {
         fprintf(stderr, "The bitvector is too long!\n");
         exit(1);
     }
-<<<<<<< HEAD
-=======
-     */
->>>>>>> e4056d8b88e00f79dfee283ea9c8fec76b73d02a
 
     for (i = 0; i < NUMOFBITS; i++)
     {
@@ -31,11 +21,7 @@ void check_bitvector(const char *bitvector)
             continue;
         else
         {
-<<<<<<< HEAD
             fprintf(stderr, "The bitvector contains symbols other than 0 or 1 or is too short!\n");
-=======
-            fprintf(stderr, "The bitvector contains symbols other than 0 or 1!\n");
->>>>>>> e4056d8b88e00f79dfee283ea9c8fec76b73d02a
             exit(1);
         }
     }
@@ -56,21 +42,8 @@ void decimal2bitvector(char *bitvector, unsigned int n)
         bitvector[i] = (n % 2 == 1 ? '1' : '0');
         n = n / 2;
     }
-<<<<<<< HEAD
     
     bitvector[NUMOFBITS] = '\0';
-    
-=======
-
-    /*
-    printf("bitvector after conversion: ");
-    for (i = 0; i <= NUMOFBITS - 1; i++)
-    {
-        printf("%c", bitvector[i]);
-    }
-     */
->>>>>>> e4056d8b88e00f79dfee283ea9c8fec76b73d02a
-    printf("\n");
 }
 
 unsigned int bitvector2decimal(const char *bitvector)
@@ -90,19 +63,11 @@ unsigned int bitvector2decimal(const char *bitvector)
 
 int main(int argc, char* argv[])
 {
-<<<<<<< HEAD
     char bitvector[NUMOFBITS + 1];
     char *unneeded_pointer;
     unsigned int converted_decimal;
 
-    // convert the argv element to an unsigned int
-=======
-    char bitvector[NUMOFBITS];
-    char *unneeded_pointer;
-    unsigned int converted_decimal;
-
     // convert the argv element to an unsigned long
->>>>>>> e4056d8b88e00f79dfee283ea9c8fec76b73d02a
     unsigned int decimal_no = strtoul(argv[1], &unneeded_pointer, 10);
 
     decimal2bitvector(bitvector, decimal_no);
