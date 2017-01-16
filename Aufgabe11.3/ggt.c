@@ -1,4 +1,6 @@
 // Bocher Diedrich Sandmeier
+//
+// Theoretically, 0 would be a legitimate number as well, but for practical purposes it has been disallowed.
 
 #include <stdio.h>
 #include <stdlib.h>
